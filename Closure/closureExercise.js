@@ -12,3 +12,7 @@ function signMessageWith(salutation) {
         writeMessage(message, salutation, name);
     }
 }
+
+function makeSignature(salutation, name) {
+    return message => writeMessage(message, salutation, name)
+}
