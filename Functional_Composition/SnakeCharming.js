@@ -23,3 +23,8 @@ function concatenate(stringArray) {
     return reduce((acc, str) => acc + str, '', stringArray);
   }
 
+// Takes a "snake_case_string" and returns a "camelCaseString"
+function snakeToCamel(snake_case_string) {
+    const pipe = pipeline(desnake, camelize, concatenate);
+    return pipe(snake_case_string);
+  }
