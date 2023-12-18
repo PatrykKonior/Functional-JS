@@ -7,3 +7,8 @@ function desnake(snake_case_string) {
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.substr(1).toLowerCase();
   }
+
+// Takes an ["array", "of", "strings"] and returns a camelized ["array", "Of", "Strings"]
+function capitalizeAll(stringArray) {
+    return map(capitalizeFirstLetter, stringArray);
+  }
