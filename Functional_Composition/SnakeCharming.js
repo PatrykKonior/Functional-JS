@@ -12,3 +12,8 @@ function capitalizeFirstLetter(string) {
 function capitalizeAll(stringArray) {
     return map(capitalizeFirstLetter, stringArray);
   }
+
+// Takes an ["array", "of", "strings"] and returns a camelized letter without first one 
+function camelize(stringArray) {
+    return [head(stringArray)].concat(capitalizeAll(tail(stringArray)));
+  }
