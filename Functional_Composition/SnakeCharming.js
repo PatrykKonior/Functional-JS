@@ -17,3 +17,9 @@ function capitalizeAll(stringArray) {
 function camelize(stringArray) {
     return [head(stringArray)].concat(capitalizeAll(tail(stringArray)));
   }
+
+// Reduce words in array into one word 
+function concatenate(stringArray) {
+    return reduce((acc, str) => acc + str, '', stringArray);
+  }
+
