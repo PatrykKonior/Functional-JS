@@ -5,3 +5,10 @@ function pipeline(...functions) {
       return pipeline(...tail(functions))(head(functions)(input));
     };
   }
+
+
+// Pipeline with reduce // 
+
+function reducePipeline(...functions) {
+    return input => reduce((acc, fn) => fn(acc), input, functions);
+  }
